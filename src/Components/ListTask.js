@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { doneTodo,undoneTodo, allTodo } from '../TodoActions'
+import { doneTodo,undoneTodo, allTodo } from '../Redux/TodoActions'
 import Task from "./Task"
 
 const ListTask =({})=>{

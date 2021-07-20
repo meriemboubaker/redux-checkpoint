@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import { useDispatch} from 'react-redux';
-import { deleteTodo, toggleTodo, todoEdit } from '../TodoActions';
+import { deleteTodo, toggleTodo, todoEdit } from '../Redux/TodoActions';
 const Task = ({todo,idx}) => {
   const [editable, setEditable] = useState(false)
   const [name, setName] = useState(todo.description)
@@ -15,7 +15,7 @@ const Task = ({todo,idx}) => {
     return (
      
       <div className="container">
-          <div>#{idx}</div>
+          <div>#{idx+1}</div>
           <div className="col">
               {editable ?
                   <textarea className="form-control" type="text" className="task"
