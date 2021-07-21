@@ -38,7 +38,7 @@ const Task = ({todo,idx}) => {
               }}
           >{editable?"Update":"Edit"}</button>
         
-        <button className="btn btn-secondary" onClick  onClick={handleDone}>
+        <button className="btn btn-secondary" onClick={handleDone}>
         {todo.isDone}
         </button>
         <div style={{cursor:"pointer",fontSize:"25px"}} onClick={()=>dispatch(deleteTodo(idx))}>
