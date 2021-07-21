@@ -4,8 +4,6 @@ import { deleteTodo, toggleTodo, todoEdit } from '../Redux/TodoActions';
 const Task = ({todo,idx}) => {
   const [editable, setEditable] = useState(false)
   const [name, setName] = useState(todo.description)
-  const [classset, setClassset] = useState("text")
-  const [colorset, setColorset] = useState("btn btn-info")
   let dispatch = useDispatch();
   const handleDone =()=>{
     dispatch(toggleTodo(todo.id))
@@ -34,6 +32,7 @@ const Task = ({todo,idx}) => {
                    setName(name);   
                   }
                   setEditable(!editable);
+                  setName(todo.description); 
                 
 
               }}
